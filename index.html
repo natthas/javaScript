@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+        }
+
+        
+    </style>
+    <title>Nattha Siriboon 60011240</title>
+</head>
+<body>
+   
+    
+
+<div class="box">
+    <p id="question"></p>
+<input id="answer" type="text"> 
+<hr/>
+<button onclick="clickk()">SUBMIT</button> <button onclick="refresh()">REFRESH</button><br/>
+<p id="nonti" style="padding: 10px"></p>
+
+</div>
+
+<script>
+    var a = Math.round(Math.random()*100);
+    var b = Math.round(Math.random()*100);
+    document.getElementById("question").innerText = "What is the answer of "+ a + " + " + b ;
+     
+    function clickk(){
+        
+        if (parseInt(document.getElementById("answer").value) == a+b) {
+            document.getElementById("nonti").innerText = "Good Job Bro!!";
+            document.getElementById("nonti").style.color = "green";
+
+        }else{
+            document.getElementById("nonti").innerText = "No Good";
+            document.getElementById("nonti").style.color = "red";
+        }
+    }
+    function refresh(){
+        var a = Math.round(Math.random()*100);
+        var b = Math.round(Math.random()*100);
+        document.getElementById("question").innerText = "What is the answer of "+ a + " + " + b ;
+        document.getElementById("answer").value = '';
+        document.getElementById("nonti").innerText = '';
+
+        }
+        
+    
+</script>
+</body>
+</html>
